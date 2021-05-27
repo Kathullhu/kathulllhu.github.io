@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="todo.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<title>David's Todo List</title>
+	<link rel="stylesheet" href="https://use.typekit.net/zts3qco.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--Adds Header and Date-->
+<div class = "list">
+	<h2 id = "header">David's Todo List  <h2 id = "date"></h2>
+<script>
+document.getElementById("date").innerHTML = Date();
+</script>
+</h2>
+
+<!--Creates inputfield where you insert text for todolist-->
+<div class="inputField">
+      <input type="text" placeholder="Add your new todo">
+      <button><i class="fas fa-plus"></i></button>
+    </div>
+
+
+<!--the unordered list for the todolist-->
+<ul id  = "todoList">
+</ul>
+
+<!--Creates a footer that is attatched with the todolist-->
+<div class = "footer">
+	<span>You have <span class = "pendingTasks"></span> pending tasks</span>
+</div>
+
+
+<!--Where the misc buttons are made-->
+<div class = "misc">
+	<h3 id = "pizza">Miscellaneous</h3>
+	<li>
+	<ul>
+		<button onclick = "sortList()" class = "rearrange">Sort List</button>
+	</ul>
+	<ul>
+		<button class = "clear">Clear All</button>
+	</ul>
+	</li>
+
+
+</div>
+
+
+<!--Code to change the color of the text for all labels-->
+	<div id = "changeeColor"></div>
+	<input name="MyColorPicker" type="color" id="MyColorPicker" /> 
+
+	<script>
+	  function changeColor(evt) {
+	    for (const element of document.getElementsByClassName("label")) {
+	      element.style.color = evt.currentTarget.value;
+	    }
+	  }
+	  
+	  document.getElementById('MyColorPicker').addEventListener('change', changeColor);
+	</script>
+	</div>
+
+	<!--Tips section, is called completed but it isnt the completed section-->
+	<div class = "completed">
+ <h3>Tips</h3>
+      <ul id="completed-tasks">
+      	<li><b>Hover over a task</b> to get the delete and edit feature</li>
+        <li><b>To edit a task</b>, type in the text you want to replace the current todo with in the "Add your Todo" bar, and press the edit icon</li>
+        <li><b>To give importance to a task</b>, double click on the task</li>
+        <li><b>To change the color of the text for all tasks</b>, press on the black strip and select the color you want </li>
+        <li><b>To sort your tasks in alphabetical order</b>, press "Sort List"; it only works when there are two or more tasks</li>
+
+
+
+     </div>
+
+<script type="text/javascript" src="todo.js" defer></script>
+</body>
+
+</html>
+    
